@@ -1,10 +1,31 @@
-$("#calculate").click(function(){
+// Add Row
+
+var count = 4;
+$("#add-row").click(function() {
+    $("#table-body").append(addNewRow(count));
+    count++;
+});
+
+function addNewRow(count) {
+    var newrow =
+        '<tr>' +
+        '<th scope="row">' + count + '</th>' +
+        '<td><input type="number" class="form-control" name="grade[]"></td>' +
+        '<td><input type="number" class="form-control" name="weight[]"></td>' +
+        '</tr>';
+    return newrow;
+}
+
+
+// Calc Grade
+
+$("#calculate").click(function() {
     var grades = document.getElementsByName('grade[]');
     var weights = document.getElementsByName('weight[]');
-    
+
     var gradesArr = [];
     var weightsArr = [];
-    
+
     var result = 0;
     var goodInput = true;
     var count = 0;
