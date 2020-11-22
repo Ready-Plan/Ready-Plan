@@ -9,7 +9,8 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Hello, world!</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/contacts.css">
 </head>
 
 <body class="outer">
@@ -90,7 +91,7 @@
                                 <span class="pl-1 menu-collapsed"> Sketch Book</span>
                             </div>
                         </a>
-                        <a href="./profile" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">calculate</span>
                                 <span class="pl-1 menu-collapsed"> Profile</span>
@@ -115,7 +116,6 @@
     <div class="container-fluid outer">
         <div class="row flex-grow-1">
             <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
-
                 <div class="outer">
                     <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                         <div class="d-flex w-100 justify-content-start align-items-center">
@@ -193,7 +193,7 @@
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
                                         </div>
                                     </a>
-                                    <a href="./profile" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">account_circle</span>
                                             <span class="pl-1 menu-collapsed"> Profile</span>
@@ -212,91 +212,54 @@
                 </div>
             </div>
 
-            <!-- Profile -->
-            <!-- <div class="col-md-10 col-12 border p-0">
-                <div class="container pb-2">
-                    <div class="row align-items-center">
-                        <div class="col-sm-3 p-3">
-                            <img src="./img/replace.jpg" alt="profile picture" class="img-thumbnail" />
-                        </div>
-                        <div class="col-sm-9">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">John Doe's</em> Profile</h1>
+            <!-- Contacts -->
+            <div class="col-md col-12 border p-0 mh-100" style="background-color: #d9e2e5;">
+                <div class="container-fluid justify-content-center">
+                    <div class="container pt-2 col-10">
+                        <div class="container-fluid">
+                            <div class="row justify-content-md-center">
+                                <div class="col-sm-7">
+                                    <h1 style="color: #262d13;"><em style="color: #556e07;">Contact</em> List</h1>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th><i class="material-icons">add</i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam profile"> Dylan</td>
+                                        <td>email1@ryerson.ca</td>
+                                        <td>647-123-4567</td>
+                                        <td><i class="material-icons">delete</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/janice.jpg" alt="Janice profile"> Janice</td>
+                                        <td>j17wong@ryerson.ca</td>
+                                        <td>647-234-5678</td>
+                                        <td><i class="material-icons">delete</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Jonathan profile"> Jonathan</td>
+                                        <td>email2@ryerson.ca</td>
+                                        <td>647-345-6789</td>
+                                        <td><i class="material-icons">delete</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam profile"> Maryam</td>
+                                        <td>email3@ryerson.ca</td>
+                                        <td>647-456-7890</td>
+                                        <td><i class="material-icons">delete</i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <form action="" method="POST">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="username" id="username" value="JohnDoe123">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">First Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="fname" id="fname" value="John">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Last Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="lname" id="lname" value="Doe">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">E-Mail</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Current Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="curpass" id="curpass">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">New Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="newpass" id="newpass">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Confirm Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="conpass" id="conpass">
-                            </div>
-                        </div>
-                        <input class="btn btn-dark col-auto" type="submit" value="Save Changes">
-                    </form>
-                </div>
-            </div> -->
-
-            <div class="col-md col-12 border p-0">
-                <div class="container-fluid">
-                    <div class="row justify-content-md-center">
-                        <div class="col-auto">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">To-Do</em> List</h1>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container">
-                    <div id="myDIV" class="header">
-                        <h4>List 1</h4>
-                    </div>
-                    <ul id="myUL">
-                        <li>Hit the gym</li>
-                        <li class="checked">Pay bills</li>
-                        <li>Meet George</li>
-                        <li>Buy eggs</li>
-                        <li>Read a book</li>
-                        <li>Organize office</li>
-                    </ul>
-
-                    <input type="text" id="myInput" placeholder="Add item">
-                    <span onclick="newElement()" class="addBtn">Add</span>
-
                 </div>
             </div>
         </div>
@@ -304,7 +267,8 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/gradeCalc.js"></script>
 </body>
 
 </html>

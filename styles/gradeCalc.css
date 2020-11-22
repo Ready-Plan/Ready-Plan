@@ -1,0 +1,9 @@
+tr {
+    border-bottom: 2px #262d13 solid;
+}
+
+th {
+    background-color: #556e07;
+    color: white;
+    text-align: center;
+}

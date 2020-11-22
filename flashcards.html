@@ -9,39 +9,193 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Hello, world!</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/flashcards.css">
 
     <body class="outer">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border">
-            <img src="./logo.png" height="30" alt="">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-md navbar-light bg-dark border">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" height="30" class="d-inline-block align-top" alt="">
+            </a>
+            <a class="d-block d-md-none" href="#">
+                <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                    <!-- This menu is hidden in bigger devices with d-sm-none. 
+                    The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+                    <li class="nav-item d-sm-block d-md-none">
+                        <ul class="list-group flex-column mb-3 pt-3">
+                            <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <span class="material-icons">calculate</span>
+                                    <span class="pl-1 menu-collapsed"> Grade Calculator</span>
+                                </div>
+                            </a>
+                            <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">today</span>
+                                    <span class="pl-1 menu-collapsed"> Calendar</span>
+                                </div>
+                            </a>
+                            <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">assignment_turned_in</span>
+                                    <span class="pl-1 menu-collapsed"> To-Do List</span>
+                                </div>
+                            </a>
+                            <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">description</span>
+                                    <span class="pl-1 menu-collapsed"> Notes</span>
+                                </div>
+                            </a>
+                            <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">contact_phone</span>
+                                    <span class="pl-1 menu-collapsed"> Contact List</span>
+                                </div>
+                            </a>
+                            <a href="./resume.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">work</span>
+                                    <span class="pl-1 menu-collapsed"> Resume Maker</span>
+                                </div>
+                            </a>
+                            <a href="./courses.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">leaderboard</span>
+                                    <span class="pl-1 menu-collapsed"> Mark Tracker</span>
+                                </div>
+                            </a>
+                            <a href="./resources.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">emoji_objects</span>
+                                    <span class="pl-1 menu-collapsed"> Resourses</span>
+                                </div>
+                            </a>
+                            <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">gesture</span>
+                                    <span class="pl-1 menu-collapsed"> Sketch Book</span>
+                                </div>
+                            </a>
+                            <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">account_circle</span>
+                                    <span class="pl-1 menu-collapsed"> Profile</span>
+                                </div>
+                            </a>
+                            <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                                    <span class="material-icons">help</span>
+                                    <span class="pl-1 menu-collapsed"> About Us</span>
+                                </div>
+                            </a>
+                        </ul>
+                    </li>
+                    <!-- Smaller devices menu END -->
                 </ul>
-                <div>
-                    <img src="./replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
-                </div>
+                <a class="d-none d-md-block" href="./profile.html">
+                    <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
+                </a>
             </div>
         </nav>
         <div class="container-fluid outer">
             <div class="row flex-grow-1">
-                <div class="col-md-2 d-none d-md-block border pt-3 sidebar">
-                    <ul class="nav nav-pills flex-column mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="pills-CPS109" data-toggle="pill" href="#pills-CPS109" role="tab" aria-controls="pills-CPS109" aria-selected="true">Grade Calculator</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="pills-CPS213" data-toggle="pill" href="#pills-CPS213" role="tab" aria-controls="pills-CPS213" aria-selected="false">Todo List</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="pills-MTH310" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Profile</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="pills-" data-toggle="pill" href="#pills-" role="tab" aria-controls="pills-contact" aria-selected="false">Flashcards</a>
-                        </li>
+                <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
+                    <div class="outer">
+                        <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                <span class="material-icons pl-1 pr-1">style</span>
+                                <h4 class="pl-1 menu-collapsed pr-3"> Flashcards</h4>
+                            </div>
+                        </a>
+                        <div class="row flex-grow-1 w-100">
+                            <div class="col">
+                                <div class="idk p-0 overflow-auto border-bottom">
+                                    <ul class="list-group flex-column overflow-auto">
+                                        <a href="#" data-toggle="sidebar-colapse" class="list-group-item list-group-item-action pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span id="toggleId" class="material-icons">arrow_back</span>
+                                                <span class="pl-1 menu-collapsed"> Collapse</span>
+                                            </div>
+                                        </a>
+                                        <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <span class="material-icons">calculate</span>
+                                                <span class="pl-1 menu-collapsed"> Grade Calculator</span>
+                                            </div>
+                                        </a>
+                                        <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">today</span>
+                                                <span class="pl-1 menu-collapsed"> Calendar</span>
+                                            </div>
+                                        </a>
+                                        <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">assignment_turned_in</span>
+                                                <span class="pl-1 menu-collapsed"> To-Do List</span>
+                                            </div>
+                                        </a>
+                                        <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">description</span>
+                                                <span class="pl-1 menu-collapsed"> Notes</span>
+                                            </div>
+                                        </a>
+                                        <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">contact_phone</span>
+                                                <span class="pl-1 menu-collapsed"> Contact List</span>
+                                            </div>
+                                        </a>
+                                        <a href="./resume.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">work</span>
+                                                <span class="pl-1 menu-collapsed"> Resume Maker</span>
+                                            </div>
+                                        </a>
+                                        <a href="./courses.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">leaderboard</span>
+                                                <span class="pl-1 menu-collapsed"> Mark Tracker</span>
+                                            </div>
+                                        </a>
+                                        <a href="./resources.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">emoji_objects</span>
+                                                <span class="pl-1 menu-collapsed"> Resourses</span>
+                                            </div>
+                                        </a>
+                                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">gesture</span>
+                                                <span class="pl-1 menu-collapsed"> Sketch Book</span>
+                                            </div>
+                                        </a>
+                                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">account_circle</span>
+                                                <span class="pl-1 menu-collapsed"> Profile</span>
+                                            </div>
+                                        </a>
+                                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="material-icons">help</span>
+                                                <span class="pl-1 menu-collapsed"> About Us</span>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Collections -->
@@ -57,13 +211,13 @@
 
                                     <ul class="nav nav-pills flex-column mb-3" id="pills-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link active" id="pills-CPS109" data-toggle="pill" href="#pills-CPS109" role="tab" aria-controls="pills-CPS109" aria-selected="true">CPS109</a>
+                                            <a class="nav-link active" data-toggle="pill" href="#pills-CPS109" role="tab">CPS109</a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" id="pills-CPS213" data-toggle="pill" href="#pills-CPS213" role="tab" aria-controls="pills-CPS213" aria-selected="false">CPS213</a>
+                                            <a class="nav-link" data-toggle="pill" href="#pills-CPS213" role="tab">CPS213</a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" id="pills-MTH310" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">MTH310</a>
+                                            <a class="nav-link" data-toggle="pill" href="#pills-MTH310" role="tab">MTH310</a>
                                         </li>
 
                                     </ul>
@@ -108,15 +262,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
 
                 <!-- Cards -->
-                <div class="tab-content col-md-8 col-12 p-2 border" id="pills-tabContent">
-                    <div class="tab-pane fade show active outer" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="tab-content col-md col-12 p-2 border" id="pills-tabContent">
+                    <div class="tab-pane fade show active outer" id="pills-CPS109" role="tabpanel">
                         <div class="outer">
                             <div>
                                 <h4 class="text-center">CPS109 Cards</h4>
@@ -309,13 +460,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-
-                        </div>
                     </div>
 
 
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="tab-pane fade" id="pills-CPS213" role="tabpanel">
                         <h3 class="text-center">CPS213 Cards</h3>
                         <hr>
                         <div class="accordion" id="accordionExample">
@@ -352,7 +500,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade" id="pills-MTH310" role="tabpanel">
                         <h3 class="text-center">MTH310 Cards</h3>
                         <hr>
                         <div class="accordion" id="accordionExample">
@@ -401,7 +549,8 @@
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <script src="./index.js"></script>
+        <script src="./scripts/index.js"></script>
+        <script src="./scripts/flashcards.js"></script>
     </body>
 
 </html>
