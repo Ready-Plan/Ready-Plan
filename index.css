@@ -12,15 +12,25 @@ body {
     height: 100%;
 }
 
-.navbar {
-    background-color: green;
-}
-
 .idk {
     max-height: 100%;
     width: 100%;
     position: absolute;
     display: block;
+}
+
+.list-group-item.active {
+    background-color: #556e07 !important;
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.list-group {
+    border-radius: 0%;
 }
 
 
@@ -125,12 +135,13 @@ body {
     background-color: #556e07;
 }
 
-a {
+li a {
     color: #556e07;
 }
 
-a:hover {
-    color: #262d13;
+li a:hover {
+    color: white;
+    background-color: #262d13;
 }
 
 .btn-link {
@@ -140,6 +151,15 @@ a:hover {
 
 .btn-link:hover {
     color: #556e07;
+}
+
+.bg-dark,
+.sidebar {
+    background-color: #d9e2e5 !important;
+}
+
+.border {
+    border: 1px solid #6e7d7b !important;
 }
 
 .sidebar {
@@ -152,9 +172,10 @@ a:hover {
 
 /* Include the padding and border in an element's total width and height */
 
-* {
+
+/* * {
     box-sizing: border-box;
-}
+} */
 
 
 /* Remove margins and padding from the list */
@@ -279,3 +300,6 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
+
+
+/* ddwddddddddddddddddddddddddddddddddddddddddd */
