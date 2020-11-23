@@ -11,6 +11,8 @@ $('[data-toggle=sidebar-colapse]').click(function() {
     SidebarCollapse();
 });
 
+// test
+
 function SidebarCollapse() {
     $('.menu-collapsed').toggleClass('d-none');
     $('.sidebar-submenu').toggleClass('d-none');
