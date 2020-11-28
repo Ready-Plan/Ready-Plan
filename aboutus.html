@@ -18,10 +18,12 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="./styles/index.css">
         <title>About Us</title>
         <style>
             h1 {
                 text-align: center;
+                margin-top: 20px;
             }
             .pfp {
                 width: 210px;
@@ -30,31 +32,29 @@
             p {
                 text-align: justify;
             }
+            .team-member {
+                margin-bottom: 50px;
+                padding-left: 120px;
+                padding-right: 120px;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background-color: black;
+            }
         </style>
     </head>
     <body style="background-color: #d9e2e5;">
         <div class="container-fluid">
-            
-            <div class="row p-3">
-                <div class="col-sm-5">
-                    <img style="width: 100px; height: auto;" src="./img/logo.png" alt="readyPlan Logo">
-                </div>
+            <div class="row justify-content-center">
+                <h1 style="color: #262d13;"><em style="color: #556e07;">About</em> Us</h1>
             </div>
-
-            <div class="row justify-content-md-center">
-                <div class="col-sm-5">
-                    <h1 style="color: #262d13;"><em style="color: #556e07;">About</em> Us</h1>
-                </div>
+            <hr>
+            <div class="row justify-content-center">
+                <h3 style="color: #262d13;"> <em style="color: #556e07;">Our</em> Work</h3>
             </div>
-            
-            <div class="row justify-content-md-center mt-4 mb-2">
-                <div class="col-sm-5">
-                    <h3 style="color: #262d13;"> <em style="color: #556e07;">Our</em> Work</h3>
-                </div>
-            </div>
-            
-            <div class="row justify-content-md-center mb-4">
-                <div class="col-sm-5">
+            <div class="row justify-content-center">
+                <div class="container">
                     <p>Our group, [insert group name], created the easy online scheduling tool readyPlan because we wanted to help
                         students who are struggling to stay organized while in an online-school environment. From student to student, we
                         empathize with your tiring efforts in trying to keep up with assignments while also maintaining a healthy life-style.
@@ -63,45 +63,51 @@
                     </p>
                 </div>
             </div>
-            
-            <div class="row justify-content-md-center mt-4 mb-4">
-                <div class="col-sm-5">
+            <hr>
+            <div class="row justify-content-center">
                     <h3 style="color: #262d13;"><em style="color: #556e07;">Meet</em> our team</h3>
-                </div>
             </div>
             
-            <div class="row justify-content-md-center p-3 ml-5 mr-5">
-
-                <div class="col-sm-3 text-center">
-                    <img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam Elbeshbishy">
-                    <h3>Maryam Elbeshbishy</h3>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center team-member">
+                    <img class="rounded-circle img-fluid pfp" src="./img/dylan.jpg" alt="Dylan Le">
+                    <h3>Dylan Le</h3>
+                    <p> Hi! My name is Dylan and I'm a student at Ryerson University. I was responsible for the following pages:
+                        Grade Calculator, Profile, and Calendar. I also worked on the design and navigation of the website.
                     </p>
+                    <a href="https://github.com/dylanle18" target="blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/dylanle18/" target="blank">linkedIn</a>
                 </div>
 
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-6 text-center team-member">
                     <img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Jonathan Edey">
                     <h3>Jonathan Edey</h3>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
                         magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                     </p>
+                    <a href="https://github.com/jkyle109" target="blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/jonathan-edey/" target="blank">linkedIn</a>
                 </div>
-
-                <div class="col-sm-3 text-center">
-                    <img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Dylan Le">
-                    <h3>Dylan Le</h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center team-member">
+                    <img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam Elbeshbishy">
+                    <h3>Maryam Elbeshbishy</h3>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
                         magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                     </p>
+                    <a href="https://github.com/maryam-elbeshbishy" target="blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/maryam-elbeshbishy-8322991a9/" target="blank">linkedIn</a>
                 </div>
 
-                <div class="col-sm-3 text-center">
+                <div class="col-lg-6 text-center team-member">
                     <img class="rounded-circle img-fluid pfp" src="./img/janice.jpg" alt="Janice Wong">
                     <h3>Janice Wong</h3>
                     <p> Hi! My name is Janice and I was mainly responsible for creating these pages: About Us, Contact List, Notes Page, and
                         To Do List. 
                     </p>
+                    <a href="https://github.com/janice-hyw" target="blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/janicehywong/" target="blank">linkedIn</a>
                 </div>
             </div>
         </div>
