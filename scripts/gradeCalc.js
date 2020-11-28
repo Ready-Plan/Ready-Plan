@@ -1,27 +1,28 @@
 // Add Row
 
 var count = 4;
-$("#add-row").click(function() {
+$("#add-row").click(function () {
     $("#table-body").append(addNewRow(count));
     count++;
 });
 
 function addNewRow(count) {
     var newrow =
-        '<tr>' +
-        '<th scope="row">' + count + '</th>' +
+        "<tr>" +
+        '<th scope="row">' +
+        count +
+        "</th>" +
         '<td><input type="number" class="form-control" name="grade[]"></td>' +
         '<td><input type="number" class="form-control" name="weight[]"></td>' +
-        '</tr>';
+        "</tr>";
     return newrow;
 }
 
-
 // Calc Grade
 
-$("#calculate").click(function() {
-    var grades = document.getElementsByName('grade[]');
-    var weights = document.getElementsByName('weight[]');
+$("#calculate").click(function () {
+    var grades = document.getElementsByName("grade[]");
+    var weights = document.getElementsByName("weight[]");
 
     var gradesArr = [];
     var weightsArr = [];
@@ -38,7 +39,10 @@ $("#calculate").click(function() {
 
     for (let i = 0; i < gradesArr.length; i++) {
         // if there are any missing grades / weights
-        if ((gradesArr[i] != "" && weightsArr[i] == "") || (gradesArr[i] == "" && weightsArr[i] != "")) {
+        if (
+            (gradesArr[i] != "" && weightsArr[i] == "") ||
+            (gradesArr[i] == "" && weightsArr[i] != "")
+        ) {
             alert("Missing Grade or Weight");
             goodInput = false;
         }
