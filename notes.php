@@ -1,3 +1,54 @@
+<?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "EuSkYq19NAkjAyTM";
+            $database = "demosdo";
+
+            // Create connection
+            $mySQL = mysqli_connect($servername, $username, $password, $database);
+
+            // Check connection
+            if (!$mySQL) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+
+            // echo "Connected successfully <br>";
+
+            $query = "SELECT * FROM `userssdo`";
+            $res = mysqli_query($mySQL, $query);
+            while($row = mysqli_fetch_assoc($res)) {
+                $fname = $row["fname"];
+                $lname = $row["lname"];
+                $username = $row["username"];
+                $email = $row["email"];
+                $password = $row["password"];
+                $jsondata = $row["userdata"];
+                $userdata = json_decode($jsondata, true);
+                $notebooks = $userdata["notes"];
+                // for($x = 0; $x < count($notebooks); $x++) {
+                
+                    // Append 
+                    // echo $notebookName . $notebookText;
+                // }
+                // $notebookName = $userdata["notes"][0][0];
+                // $notebookText = $userdata["notes"][0][1];
+                // echo implode(" ",$tts);
+                // $notes = $userdata["notes"];
+                // echo count($notes);
+                // for($x = 0; $x < $arrlength; $x++) {
+                //     echo $cars[$x];
+                //     echo "<br>";
+                // }
+
+                // echo "First Name: " . $fname;
+            }
+            // echo $res["userdata"]
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +62,11 @@
     <title>Hello, world!</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/flashcards.css">
-
+    <!-- <script type="text/javascript">
+        let somethin = '<?php echo $tts;?>';
+        console.log(somethin);
+    </script> -->
+    
     <body class="outer">
         <nav class="navbar navbar-expand-md navbar-light bg-dark border" id="top-nav">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -198,16 +253,25 @@
                                 <div class="idk p-0 overflow-auto border-bottom">
 
                                     <ul class="nav nav-pills flex-column mb-3" id="pills-tab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-CPS109" role="tab">CPS109</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-CPS213" role="tab">CPS213</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-MTH310" role="tab">MTH310</a>
-                                        </li>
-
+                                        <?php
+                                            $notebookName = $userdata["notes"][0]["name"];
+                                            echo <<<CARD
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-0" role="tab">$notebookName</a>
+                                            </li>
+                                            CARD;
+                                            for($x = 1; $x < count($notebooks); $x++) {
+                                                $notebookName = $userdata["notes"][$x]["name"];
+                                                // $notebookText = $userdata["notes"][$x]["text"];
+                                                // Append 
+                                                // echo $notebookName . $notebookText;
+                                                echo  <<<CARD
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-$x" role="tab">$notebookName</a>
+                                                </li>
+                                                CARD;
+                                            }
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
@@ -254,86 +318,68 @@
 
                 <!-- Cards -->
                 <div class="tab-content col-md col-12 p-2 border" id="pills-tabContent">
-                    <div class="tab-pane fade show active outer" id="pills-CPS109" role="tabpanel">
-                        <div class="outer">
-                            <div>
-                                <h4 class="text-center">CPS109 Notes</h4>
-                                <hr>
-                            </div>
+                    <?php
+                        $notebookName = $userdata["notes"][0]["name"];
+                        $notebookText = $userdata["notes"][0]["text"];
+                        echo <<<CARD
+                        <div class="tab-pane fade show active outer" id="pills-0" role="tabpanel">
                             <div class="outer">
-                                <div class="col p-0">
-                                    <!-- Collapse -->
-                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
-
-                                </div>
-                                <!-- Buttons -->
                                 <div>
-                                    <div class="row justify-content-right pt-2 mw-100 ">
-                                        <div class="col-2 ">
-                                            <button type="button " class="btn btn-dark ">
-                                                Save
-                                            </button>
+                                    <h4 class="text-center">$notebookName</h4>
+                                    <hr>
+                                </div>
+                                <div class="outer">
+                                    <div class="col p-0">
+                                        <!-- Collapse -->
+                                        <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here...">$notebookText</textarea>
+
+                                    </div>
+                                    <!-- Buttons -->
+                                    <div>
+                                        <div class="row justify-content-right pt-2 mw-100 ">
+                                            <div class="col-2 ">
+                                                <button type="button " class="btn btn-dark ">
+                                                    Save
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        CARD;
+                        for($x = 1; $x < count($notebooks); $x++) {
+                            $notebookName = $userdata["notes"][$x]["name"];
+                            $notebookText = $userdata["notes"][$x]["text"];
+                            echo  <<<CARD
+                            <div class="tab-pane fade outer" id="pills-$x" role="tabpanel">
+                                <div class="outer">
+                                    <div>
+                                        <h4 class="text-center">$notebookName</h4>
+                                        <hr>
+                                    </div>
+                                    <div class="outer">
+                                        <div class="col p-0">
+                                            <!-- Collapse -->
+                                            <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here...">$notebookText</textarea>
 
-                    <div class="tab-pane fade outer" id="pills-CPS213" role="tabpanel">
-                        <div class="outer">
-                            <div>
-                                <h4 class="text-center">CPS213 Notes</h4>
-                                <hr>
-                            </div>
-                            <div class="outer">
-                                <div class="col p-0">
-                                    <!-- Collapse -->
-                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
-
-                                </div>
-                                <!-- Buttons -->
-                                <div>
-                                    <div class="row justify-content-right pt-2 mw-100 ">
-                                        <div class="col-2 ">
-                                            <button type="button " class="btn btn-dark ">
-                                                Save
-                                            </button>
+                                        </div>
+                                        <!-- Buttons -->
+                                        <div>
+                                            <div class="row justify-content-right pt-2 mw-100 ">
+                                                <div class="col-2 ">
+                                                    <button type="button " class="btn btn-dark ">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade outer" id="pills-MTH310" role="tabpanel">
-                        <div class="outer">
-                            <div>
-                                <h4 class="text-center">MTH310 Notes</h4>
-                                <hr>
-                            </div>
-                            <div class="outer">
-                                <div class="col p-0">
-                                    <!-- Collapse -->
-                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
-
-                                </div>
-                                <!-- Buttons -->
-                                <div>
-                                    <div class="row justify-content-right pt-2 mw-100 ">
-                                        <div class="col-2 ">
-                                            <button type="button " class="btn btn-dark ">
-                                                Save
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
+                            CARD;
+                        }
+                    ?>
                 </div>
             </div>
 
