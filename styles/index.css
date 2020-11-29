@@ -19,6 +19,10 @@ body {
     display: block;
 }
 
+.list-group-item {
+    border-right: white;
+}
+
 .list-group-item.active {
     background-color: #556e07 !important;
     border: none;
@@ -30,7 +34,8 @@ body {
 }
 
 .list-group {
-    border-radius: 0%;
+    border-radius: 0;
+    border-right: white;
 }
 
 
@@ -96,6 +101,10 @@ li a:hover {
 
 .border {
     border: none !important;
+}
+
+.sidebar {
+    background-color: white !important;
 }
 
 #top-nav {

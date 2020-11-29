@@ -102,7 +102,7 @@
 
 })();
 
-function DownloadCanvasAsImage() {
+function saveImage() {
     var canvas = document.getElementById("whiteboard");
     let downloadLink = document.createElement('a');
     downloadLink.setAttribute('download', 'screenshot.png');
