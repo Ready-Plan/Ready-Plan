@@ -1,6 +1,8 @@
-(function () {
+(function() {
     var canvas = document.getElementById("whiteboard");
     var ctx = canvas.getContext("2d");
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     var current = {
         color: "black",
@@ -64,6 +66,8 @@
     };
 
     resizeCanvas = () => {
+        var canvas = document.getElementById("whiteboard");
+
         d = document.getElementById("d");
 
         // Get size from parent div
@@ -71,12 +75,15 @@
         const ch = d.offsetHeight;
 
         // Set canvas attribute size
-        canvas.width = cw-10;
-        canvas.height = ch-10;
+        canvas.width = cw - 2;
+        canvas.height = ch - 2;
 
         // Set canvas styles size
         canvas.style.width = cw + "px";
         canvas.style.height = ch + "px";
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
 
     canvas.addEventListener("mousedown", startTrackMouse, false);
@@ -92,4 +99,15 @@
 
     window.addEventListener("resize", resizeCanvas, false);
     resizeCanvas();
+
 })();
+
+function saveImage() {
+    var canvas = document.getElementById("whiteboard");
+    let downloadLink = document.createElement('a');
+    downloadLink.setAttribute('download', 'screenshot.png');
+    let dataURL = canvas.toDataURL('image/png');
+    let url = dataURL.replace(/^data:image\/png/, 'data:application/octet-stream');
+    downloadLink.setAttribute('href', url);
+    downloadLink.click();
+}
