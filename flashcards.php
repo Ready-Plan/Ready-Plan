@@ -54,13 +54,13 @@
                                     <span class="pl-1"> Contact List</span>
                                 </div>
                             </a>
-                            <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                            <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                 <div class="d-flex w-100 justify-content-start align-items-center">
                                     <span class="material-icons">description</span>
                                     <span class="pl-1"> Notes</span>
                                 </div>
                             </a>
-                            <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                            <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                 <div class="d-flex w-100 justify-content-start align-items-center">
                                     <span class="material-icons">style</span>
                                     <span class="pl-1"> Flashcards</span>
@@ -103,7 +103,7 @@
             <div class="row flex-grow-1">
                 <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
                     <div class="outer">
-                        <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                        <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons pl-1 pr-1">style</span>
                                 <h4 class="pl-1 menu-collapsed pr-3"> Flashcards</h4>
@@ -143,13 +143,13 @@
                                                 <span class="pl-1 menu-collapsed"> Contact List</span>
                                             </div>
                                         </a>
-                                        <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                        <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                             <div class="d-flex w-100 justify-content-start align-items-center">
                                                 <span class="material-icons">description</span>
                                                 <span class="pl-1 menu-collapsed"> Notes</span>
                                             </div>
                                         </a>
-                                        <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                        <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                             <div class="d-flex w-100 justify-content-start align-items-center">
                                                 <span class="material-icons">style</span>
                                                 <span class="pl-1 menu-collapsed"> Flashcards</span>
