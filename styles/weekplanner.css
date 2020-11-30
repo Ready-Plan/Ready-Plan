@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+
+body {
+    background-color: #d9e2e5;
+}
+
+h1 {
+    text-align: center;
+    background-color: #556e07;
+    font-family: "Source Code Pro", monospace;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: calc(100% - 65px);
+    font-size: larger;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    font-family: "Source Code Pro", monospace;
+    padding: 10px;
+}
+
+.weekday {
+    height: 400px;
+}
+
+.row {
+    margin: 20px;
+}
