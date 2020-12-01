@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /* background-color: #d9e2e5; */
+}
+
+.outer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.idk {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+}
+
+.list-group-item {
+    border-right: white;
+}
+
+.list-group-item.active {
+    background-color: #556e07 !important;
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.list-group {
+    border-radius: 0;
+    border-right: white;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #556e07;
+}
+
+.btn-dark,
+.btn-primary {
+    background-color: #556e07;
+}
+
+.btn-dark:hover,
+.btn-primary:hover {
+    background-color: #262d13;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #556e07;
+}
+
+li a {
+    color: #556e07;
+}
+
+li a:hover {
+    color: white;
+    background-color: #262d13;
+}
+
+.btn-link {
+    color: black;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    color: #556e07;
+}
+
+.border {
+    border: none !important;
+}
+
+.sidebar {
+    background-color: white !important;
+}
+
+#top-nav {
+    background-color: #343a40 !important;
+}
+
+.navbar-toggler {
+    background-color: #d9e2e5 !important;
+}

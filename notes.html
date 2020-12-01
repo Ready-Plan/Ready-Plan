@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Hello, world!</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="./styles/flashcards.css">
 
     <body class="outer">
         <nav class="navbar navbar-expand-md navbar-light bg-dark border" id="top-nav">
@@ -36,10 +36,10 @@
                                     <span class="pl-1"> Grade Calculator</span>
                                 </div>
                             </a>
-                            <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                            <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                 <div class="d-flex w-100 justify-content-start align-items-center">
                                     <span class="material-icons">today</span>
-                                    <span class="pl-1"> Week Planner</span>
+                                    <span class="pl-1"> Calendar</span>
                                 </div>
                             </a>
                             <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
@@ -103,10 +103,10 @@
             <div class="row flex-grow-1">
                 <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
                     <div class="outer">
-                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                        <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                             <div class="d-flex w-100 justify-content-start align-items-center">
-                                <span class="material-icons pl-1 pr-1">account_circle</span>
-                                <h4 class="pl-3 menu-collapsed pr-5"> Profile</h4>
+                                <span class="material-icons pl-1 pr-1">description</span>
+                                <h4 class="pl-3 menu-collapsed pr-5"> Notes</h4>
                             </div>
                         </a>
                         <div class="row flex-grow-1 w-100">
@@ -125,10 +125,10 @@
                                                 <span class="pl-1 menu-collapsed"> Grade Calculator</span>
                                             </div>
                                         </a>
-                                        <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                        <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                             <div class="d-flex w-100 justify-content-start align-items-center">
                                                 <span class="material-icons">today</span>
-                                                <span class="pl-1 menu-collapsed"> Week Planner</span>
+                                                <span class="pl-1 menu-collapsed"> Calendar</span>
                                             </div>
                                         </a>
                                         <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
@@ -185,76 +185,170 @@
                         </div>
                     </div>
                 </div>
-                <!-- Profile -->
-                <div class="col-md col-12 border p-0 mh-100" id="profile-container">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-sm-2 pt-2">
-                                <img src="./img/replace.jpg" alt="profile picture" class="img-thumbnail" />
-                            </div>
-                            <div class="col-sm-9">
-                                <h1 style="color: #262d13;"><em style="color: #556e07;">John Doe's</em> Profile</h1>
+
+                <!-- Notebooks -->
+                <div class="col-md-2 col-12 border p-0">
+                    <div class="outer">
+                        <div class="pt-2">
+                            <h4 class="text-center">Notebooks</h4>
+                            <hr>
+                        </div>
+                        <div class="row flex-grow-1 w-100">
+                            <div class="col">
+                                <div class="idk p-0 overflow-auto border-bottom">
+
+                                    <ul class="nav nav-pills flex-column mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-CPS109" role="tab">CPS109</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-CPS213" role="tab">CPS213</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-MTH310" role="tab">MTH310</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <form action="" method="POST">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Username</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="username" id="username" value="JohnDoe123">
+
+                        <!-- Notebook Button -->
+                        <div>
+                            <!-- Add Button -->
+                            <div class="row justify-content-around p-2">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-dark " data-toggle="modal" data-target="#collectionModal">
+                                        Add Notebook
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">First Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="fname" id="fname" value="John">
+                            <!-- Notebook Modal -->
+                            <div class="modal fade" id="collectionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="collectionModal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="collectionName">Notebook Name: </label>
+                                                    <input type="text" class="form-control" id="collectionName" placeholder="Revision">
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-dark" data-dismiss="modal">Save</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Last Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="lname" id="lname" value="Doe">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">E-Mail</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Current Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="curpass" id="curpass">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">New Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="newpass" id="newpass">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Confirm Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="conpass" id="conpass">
-                                </div>
-                            </div>
-                            <input class="btn btn-dark col-auto" type="submit" value="Save Changes">
-                        </form>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Cards -->
+                <div class="tab-content col-md col-12 p-2 border" id="pills-tabContent">
+                    <div class="tab-pane fade show active outer" id="pills-CPS109" role="tabpanel">
+                        <div class="outer">
+                            <div>
+                                <h4 class="text-center">CPS109 Notes</h4>
+                                <hr>
+                            </div>
+                            <div class="outer">
+                                <div class="col p-0">
+                                    <!-- Collapse -->
+                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
 
+                                </div>
+                                <!-- Buttons -->
+                                <div>
+                                    <div class="row justify-content-right pt-2 mw-100 ">
+                                        <div class="col-2 ">
+                                            <button type="button " class="btn btn-dark ">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade outer" id="pills-CPS213" role="tabpanel">
+                        <div class="outer">
+                            <div>
+                                <h4 class="text-center">CPS213 Notes</h4>
+                                <hr>
+                            </div>
+                            <div class="outer">
+                                <div class="col p-0">
+                                    <!-- Collapse -->
+                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div>
+                                    <div class="row justify-content-right pt-2 mw-100 ">
+                                        <div class="col-2 ">
+                                            <button type="button " class="btn btn-dark ">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade outer" id="pills-MTH310" role="tabpanel">
+                        <div class="outer">
+                            <div>
+                                <h4 class="text-center">MTH310 Notes</h4>
+                                <hr>
+                            </div>
+                            <div class="outer">
+                                <div class="col p-0">
+                                    <!-- Collapse -->
+                                    <textarea class="form-control h-100" id="exampleFormControlTextarea1" placeholder="Type here..."></textarea>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div>
+                                    <div class="row justify-content-right pt-2 mw-100 ">
+                                        <div class="col-2 ">
+                                            <button type="button " class="btn btn-dark ">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- <div>
+
+
+        </div>
+        <!-- <div>
                 footer
             </div> -->
 
         </div>
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <script src="./scripts/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+        <script src="./scripts/index.js "></script>
+        <script src="./scripts/flashcards.js "></script>
     </body>
 
 </html>

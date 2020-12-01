@@ -1,0 +1,17 @@
+.pfp {
+    width: 30px;
+    height: 30px;
+}
+
+td {
+    background-color: white
+}
+
+tr {
+    border-bottom: 2px #262d13 solid;
+}
+
+.name {
+    background-color: #556e07;
+    color: white;
+}
