@@ -60,3 +60,7 @@ body {
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
 }
+
+.iii {
+    background-color: white;
+}

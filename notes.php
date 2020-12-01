@@ -259,20 +259,20 @@ if ($row = mysqli_fetch_array($res)) {
                                     <?php
                                     $notebookName = $notebooks[0]["name"];
                                     echo <<<CARD
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-0" role="tab">$notebookName</a>
-                                            </li>
-                                            CARD;
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-0" role="tab">$notebookName</a>
+                                        </li>
+                                    CARD;
                                     for ($x = 1; $x < count($notebooks); $x++) {
                                         $notebookName = $notebooks[$x]["name"];
                                         // $notebookText = $userdata["notes"][$x]["text"];
                                         // Append 
                                         // echo $notebookName . $notebookText;
                                         echo  <<<CARD
-                                                <li class="nav-item" role="presentation">
-                                                    <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-$x" role="tab">$notebookName</a>
-                                                </li>
-                                                CARD;
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-$x" role="tab">$notebookName</a>
+                                            </li>
+                                        CARD;
                                     }
                                     ?>
                                 </ul>
@@ -327,7 +327,38 @@ if ($row = mysqli_fetch_array($res)) {
                 $notebookName = $notebooks[0]["name"];
                 $notebookText = $notebooks[0]["text"];
                 echo <<<CARD
-                        <div class="tab-pane fade show active outer" id="pills-0" role="tabpanel">
+                    <div class="tab-pane fade show active outer" id="pills-0" role="tabpanel">
+                        <div class="outer">
+                            <div>
+                                <h4 class="text-center">$notebookName</h4>
+                                <hr>
+                            </div>
+                        
+                                <form action="./scripts/updateNote.php" method="post" class="outer">
+                                    <div class="col p-0">
+                                        <!-- Collapse -->
+                                        <textarea name="text" class="form-control h-100" id="notebook-0" placeholder="Type here...">$notebookText</textarea>
+
+                                    </div>
+                                    <!-- Buttons -->
+                                    <div>
+                                        <div class="row justify-content-right pt-2 mw-100 ">
+                                            <div class="col-2 ">
+                                                <button name="name" value="$notebookName" type="button " class="btn btn-dark ">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                CARD;
+                for ($x = 1; $x < count($notebooks); $x++) {
+                    $notebookName = $notebooks[$x]["name"];
+                    $notebookText = $notebooks[$x]["text"];
+                    echo  <<<CARD
+                        <div class="tab-pane fade show outer" id="pills-$x" role="tabpanel">
                             <div class="outer">
                                 <div>
                                     <h4 class="text-center">$notebookName</h4>
@@ -337,7 +368,7 @@ if ($row = mysqli_fetch_array($res)) {
                                     <form action="./scripts/updateNote.php" method="post" class="outer">
                                         <div class="col p-0">
                                             <!-- Collapse -->
-                                            <textarea name="text" class="form-control h-100" id="notebook-0" placeholder="Type here...">$notebookText</textarea>
+                                            <textarea name="text" class="form-control h-100" id="notebook-$x" placeholder="Type here...">$notebookText</textarea>
 
                                         </div>
                                         <!-- Buttons -->
@@ -353,38 +384,7 @@ if ($row = mysqli_fetch_array($res)) {
                                     </form>
                             </div>
                         </div>
-                        CARD;
-                for ($x = 1; $x < count($notebooks); $x++) {
-                    $notebookName = $notebooks[$x]["name"];
-                    $notebookText = $notebooks[$x]["text"];
-                    echo  <<<CARD
-                            <div class="tab-pane fade show outer" id="pills-$x" role="tabpanel">
-                                <div class="outer">
-                                    <div>
-                                        <h4 class="text-center">$notebookName</h4>
-                                        <hr>
-                                    </div>
-                                
-                                        <form action="./scripts/updateNote.php" method="post" class="outer">
-                                            <div class="col p-0">
-                                                <!-- Collapse -->
-                                                <textarea name="text" class="form-control h-100" id="notebook-$x" placeholder="Type here...">$notebookText</textarea>
-
-                                            </div>
-                                            <!-- Buttons -->
-                                            <div>
-                                                <div class="row justify-content-right pt-2 mw-100 ">
-                                                    <div class="col-2 ">
-                                                        <button name="name" value="$notebookName" type="button " class="btn btn-dark ">
-                                                            Save
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                </div>
-                            </div>
-                            CARD;
+                    CARD;
                 }
                 ?>
             </div>
