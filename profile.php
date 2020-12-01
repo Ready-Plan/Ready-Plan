@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>readyPlan - Grade Calculator</title>
+    <title>readyPlan - Profile</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/gradeCalc.css">
+    <link rel="stylesheet" href="./styles/profile.css">
 </head>
 
 <body class="outer">
@@ -28,7 +28,7 @@
             <ul class="navbar-nav ml-auto">
 
                 <!-- This menu is hidden in bigger devices with d-sm-none. 
-                The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+                    The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
                 <li class="nav-item d-sm-block d-md-none">
                     <ul class="list-group flex-column mb-3 pt-3">
                         <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
@@ -100,15 +100,14 @@
             </a>
         </div>
     </nav>
-    <!-- NavBar END -->
     <div class="container-fluid outer">
         <div class="row flex-grow-1">
             <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
                 <div class="outer">
-                    <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                    <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                         <div class="d-flex w-100 justify-content-start align-items-center">
-                            <span class="material-icons pr-1">calculate</span>
-                            <h4 class="pl-1 menu-collapsed"> Grade Calculator</h4>
+                            <span class="material-icons pl-1 pr-1">account_circle</span>
+                            <h4 class="pl-3 menu-collapsed pr-5"> Profile</h4>
                         </div>
                     </a>
                     <div class="row flex-grow-1 w-100">
@@ -187,67 +186,76 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Grade Calc -->
-            <div class="col-md col-12 border p-0 mh-100" style="background-color: #d9e2e5;">
-                <div class="container-fluid justify-content-center">
-                    <div class="container pt-2 col-10">
-                        <div class="row">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">Grade</em> Calculator</h1>
+            <!-- Profile -->
+            <div class="col-md col-12 border p-0 mh-100" id="profile-container">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-sm-2 pt-2">
+                            <img src="./img/replace.jpg" alt="profile picture" class="img-thumbnail" />
                         </div>
-                        <form>
-                            <div class="row pt-3">
-                                <table class="table">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Percent Grade</th>
-                                            <th scope="col">Weight</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table-body">
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-6 btn-group">
-                                    <input type="button" class="btn btn-dark" id="calculate" value="Calculate">
-                                    <input type="reset" class="btn btn-dark">
-                                    <input type="button" class="btn btn-dark" id="add-row" value="Add Row">
-                                </div>
-                                <div class="col-xl-6 input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" style="background-color:#556e07; color: white;">Average Grade:</span>
-                                    </div>
-                                    <input type="text" class="form-control" readonly id="result">
-                                </div>
-                            </div>
-                        </form>
+                        <div class="col-sm-9">
+                            <h1 style="color: #262d13;"><em style="color: #556e07;">John Doe's</em> Profile</h1>
+                        </div>
                     </div>
+                    <form action="" method="POST">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="username" id="username" value="JohnDoe123">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="fname" id="fname" value="John">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="lname" id="lname" value="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">E-Mail</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Current Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" name="curpass" id="curpass">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">New Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" name="newpass" id="newpass">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Confirm Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" name="conpass" id="conpass">
+                            </div>
+                        </div>
+                        <input class="btn btn-dark col-auto" type="submit" value="Save Changes">
+                    </form>
                 </div>
             </div>
+
+
         </div>
+        <!-- <div>
+                footer
+            </div> -->
+
     </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/gradeCalc.js"></script>
 </body>
 
 </html>

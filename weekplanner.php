@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>Hello, world!</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/todolist.css">
+    <link rel="stylesheet" href="./styles/weekplanner.css" />
+    <title>readyPlan - Week Planner</title>
 </head>
 
-<body class="outer">
+<body>
     <nav class="navbar navbar-expand-md navbar-light bg-dark border" id="top-nav">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./">
             <img src="./img/lightlogo.png" height="30" class="d-inline-block align-top" alt="">
         </a>
-        <a class="d-block d-md-none" href="#">
+        <a class="d-block d-md-none" href="./profile.php">
             <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
 
                 <!-- This menu is hidden in bigger devices with d-sm-none. 
-                The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+                    The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
                 <li class="nav-item d-sm-block d-md-none">
                     <ul class="list-group flex-column mb-3 pt-3">
                         <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
@@ -37,31 +37,31 @@
                                 <span class="pl-1"> Grade Calculator</span>
                             </div>
                         </a>
-                        <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">today</span>
                                 <span class="pl-1"> Week Planner</span>
                             </div>
                         </a>
-                        <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">assignment_turned_in</span>
                                 <span class="pl-1"> To-Do List</span>
                             </div>
                         </a>
-                        <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">contact_phone</span>
                                 <span class="pl-1"> Contact List</span>
                             </div>
                         </a>
-                        <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">description</span>
                                 <span class="pl-1"> Notes</span>
                             </div>
                         </a>
-                        <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">style</span>
                                 <span class="pl-1"> Flashcards</span>
@@ -79,7 +79,7 @@
                                 <span class="pl-1"> Resourses</span>
                             </div>
                         </a>
-                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">account_circle</span>
                                 <span class="pl-1"> Profile</span>
@@ -95,21 +95,19 @@
                 </li>
                 <!-- Smaller devices menu END -->
             </ul>
-            <a class="d-none d-md-block" href="./profile.html">
+            <a class="d-none d-md-block" href="./profile.php">
                 <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
             </a>
         </div>
     </nav>
-    <!-- NavBar END -->
     <div class="container-fluid outer">
         <div class="row flex-grow-1">
             <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
-
                 <div class="outer">
-                    <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                    <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                         <div class="d-flex w-100 justify-content-start align-items-center">
-                            <span class="material-icons pl-1 pr-1">assignment_turned_in</span>
-                            <h4 class="pl-1 menu-collapsed pr-3"> To-Do List</h4>
+                            <span class="material-icons">today</span>
+                            <h4 class="pl-3 menu-collapsed pr-3"> Week Planner</h4>
                         </div>
                     </a>
                     <div class="row flex-grow-1 w-100">
@@ -128,31 +126,31 @@
                                             <span class="pl-1 menu-collapsed"> Grade Calculator</span>
                                         </div>
                                     </a>
-                                    <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">today</span>
                                             <span class="pl-1 menu-collapsed"> Week Planner</span>
                                         </div>
                                     </a>
-                                    <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">assignment_turned_in</span>
                                             <span class="pl-1 menu-collapsed"> To-Do List</span>
                                         </div>
                                     </a>
-                                    <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">contact_phone</span>
                                             <span class="pl-1 menu-collapsed"> Contact List</span>
                                         </div>
                                     </a>
-                                    <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">description</span>
                                             <span class="pl-1 menu-collapsed"> Notes</span>
                                         </div>
                                     </a>
-                                    <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">style</span>
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
@@ -170,7 +168,7 @@
                                             <span class="pl-1 menu-collapsed"> Resourses</span>
                                         </div>
                                     </a>
-                                    <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">account_circle</span>
                                             <span class="pl-1 menu-collapsed"> Profile</span>
@@ -188,43 +186,55 @@
                     </div>
                 </div>
             </div>
-
-            <!-- To-Do List -->
-            <div class="col-md col-12 border p-0" style="background-color:#d9e2e5;">
+            <!-- Week Planner -->
+            <div class="col-md col-12 border p-0 mh-100" id="profile-container">
                 <div class="container-fluid">
-                    <div class="row justify-content-sm-center">
-                        <div class="col-auto">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">To-Do</em> List</h1>
+                    <div class="row weekday-row">
+                        <div class="col-lg-3 weekday">
+                            <h1>Sunday</h1>
+                            <textarea name="Sunday" id="Sunday" placeholder="Type here..."></textarea>
+                        </div>
+                        <div class="col-lg-3 weekday">
+                            <h1>Monday</h1>
+                            <textarea name="Monday" id="Monday" placeholder="Type here..."></textarea>
+                        </div>
+                        <div class="col-lg-3 weekday">
+                            <h1>Tuesday</h1>
+                            <textarea name="Tuesday" id="Tuesday" placeholder="Type here..."></textarea>
+                        </div>
+                        <div class="col-lg-3 weekday">
+                            <h1>Wednesday</h1>
+                            <textarea name="Wednesday" id="Wednesday" placeholder="Type here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row weekday-row">
+                        <div class="col-lg-4 weekday">
+                            <h1>Thursday</h1>
+                            <textarea name="Thursday" id="Thursday" placeholder="Type here..."></textarea>
+                        </div>
+                        <div class="col-lg-4 weekday">
+                            <h1>Friday</h1>
+                            <textarea name="Friday" id="Friday" placeholder="Type here..."></textarea>
+                        </div>
+                        <div class="col-lg-4 weekday">
+                            <h1>Saturday</h1>
+                            <textarea name="Saturday" id="Saturday" placeholder="Type here..."></textarea>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="container">
-                    <div id="myDIV" class="header">
-                        <h4>List 1</h4>
-                    </div>
-                    <ul id="myUL">
-                        <li>Hit the gym</li>
-                        <li class="checked">Pay bills</li>
-                        <li>Meet George</li>
-                        <li>Buy eggs</li>
-                        <li>Read a book</li>
-                        <li>Organize office</li>
-                    </ul>
-
-                    <input type="text" id="myInput" placeholder="Add item">
-                    <span onclick="newElement()" class="addBtn">Add</span>
-
-                </div>
             </div>
+
+
         </div>
+        <!-- <div>
+                footer
+            </div> -->
+
     </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/todolist.js"></script>
 </body>
 
 </html>

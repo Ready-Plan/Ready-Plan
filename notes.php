@@ -57,7 +57,7 @@ if ($row = mysqli_fetch_array($res)) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>readyPlan</title>
+    <title>readyPlan - Notes</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/flashcards.css">
     <script type="text/javascript">
@@ -69,16 +69,17 @@ if ($row = mysqli_fetch_array($res)) {
         // let somethin = '';
         // console.log(somethin);
     </script>
+</head>
 
 <body class="outer">
     <nav class="navbar navbar-expand-md navbar-light bg-dark border" id="top-nav">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./">
             <img src="./img/lightlogo.png" height="30" class="d-inline-block align-top" alt="">
         </a>
-        <a class="d-block d-md-none" href="#">
+        <a class="d-block d-md-none" href="./profile.php">
             <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -94,19 +95,19 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Grade Calculator</span>
                             </div>
                         </a>
-                        <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">today</span>
-                                <span class="pl-1"> Calendar</span>
+                                <span class="pl-1"> Week Planner</span>
                             </div>
                         </a>
-                        <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">assignment_turned_in</span>
                                 <span class="pl-1"> To-Do List</span>
                             </div>
                         </a>
-                        <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">contact_phone</span>
                                 <span class="pl-1"> Contact List</span>
@@ -136,7 +137,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Resourses</span>
                             </div>
                         </a>
-                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">account_circle</span>
                                 <span class="pl-1"> Profile</span>
@@ -152,7 +153,7 @@ if ($row = mysqli_fetch_array($res)) {
                 </li>
                 <!-- Smaller devices menu END -->
             </ul>
-            <a class="d-none d-md-block" href="./profile.html">
+            <a class="d-none d-md-block" href="./profile.php">
                 <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
             </a>
         </div>
@@ -183,19 +184,19 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Grade Calculator</span>
                                         </div>
                                     </a>
-                                    <a href="./calendar.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">today</span>
-                                            <span class="pl-1 menu-collapsed"> Calendar</span>
+                                            <span class="pl-1 menu-collapsed"> Week Planner</span>
                                         </div>
                                     </a>
-                                    <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">assignment_turned_in</span>
                                             <span class="pl-1 menu-collapsed"> To-Do List</span>
                                         </div>
                                     </a>
-                                    <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">contact_phone</span>
                                             <span class="pl-1 menu-collapsed"> Contact List</span>
@@ -225,7 +226,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Resourses</span>
                                         </div>
                                     </a>
-                                    <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">account_circle</span>
                                             <span class="pl-1 menu-collapsed"> Profile</span>
@@ -237,6 +238,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> About Us</span>
                                         </div>
                                     </a>
+
                                 </ul>
                             </div>
                         </div>

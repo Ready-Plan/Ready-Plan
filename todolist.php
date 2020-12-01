@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>readyPlan - Grade Calculator</title>
+    <title>readyPlan - To-Do List</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/gradeCalc.css">
+    <link rel="stylesheet" href="./styles/todolist.css">
 </head>
 
 <body class="outer">
@@ -104,11 +104,12 @@
     <div class="container-fluid outer">
         <div class="row flex-grow-1">
             <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
+
                 <div class="outer">
-                    <a href="./gradeCalc.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                    <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                         <div class="d-flex w-100 justify-content-start align-items-center">
-                            <span class="material-icons pr-1">calculate</span>
-                            <h4 class="pl-1 menu-collapsed"> Grade Calculator</h4>
+                            <span class="material-icons pl-1 pr-1">assignment_turned_in</span>
+                            <h4 class="pl-1 menu-collapsed pr-3"> To-Do List</h4>
                         </div>
                     </a>
                     <div class="row flex-grow-1 w-100">
@@ -188,57 +189,33 @@
                 </div>
             </div>
 
-            <!-- Grade Calc -->
-            <div class="col-md col-12 border p-0 mh-100" style="background-color: #d9e2e5;">
-                <div class="container-fluid justify-content-center">
-                    <div class="container pt-2 col-10">
-                        <div class="row">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">Grade</em> Calculator</h1>
+            <!-- To-Do List -->
+            <div class="col-md col-12 border p-0" style="background-color:#d9e2e5;">
+                <div class="container-fluid">
+                    <div class="row justify-content-sm-center">
+                        <div class="col-auto">
+                            <h1 style="color: #262d13;"><em style="color: #556e07;">To-Do</em> List</h1>
                         </div>
-                        <form>
-                            <div class="row pt-3">
-                                <table class="table">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Percent Grade</th>
-                                            <th scope="col">Weight</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table-body">
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td><input type="number" class="form-control" name="grade[]"></td>
-                                            <td><input type="number" class="form-control" name="weight[]"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-6 btn-group">
-                                    <input type="button" class="btn btn-dark" id="calculate" value="Calculate">
-                                    <input type="reset" class="btn btn-dark">
-                                    <input type="button" class="btn btn-dark" id="add-row" value="Add Row">
-                                </div>
-                                <div class="col-xl-6 input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" style="background-color:#556e07; color: white;">Average Grade:</span>
-                                    </div>
-                                    <input type="text" class="form-control" readonly id="result">
-                                </div>
-                            </div>
-                        </form>
                     </div>
+                </div>
+
+
+                <div class="container">
+                    <div id="myDIV" class="header">
+                        <h4>List 1</h4>
+                    </div>
+                    <ul id="myUL">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+                        <li>Organize office</li>
+                    </ul>
+
+                    <input type="text" id="myInput" placeholder="Add item">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+
                 </div>
             </div>
         </div>
@@ -247,7 +224,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/gradeCalc.js"></script>
+    <script src="./scripts/todolist.js"></script>
 </body>
 
 </html>

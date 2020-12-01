@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>Hello, world!</title>
+    <title>readyPlan - Contact List</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/contacts.css">
 </head>
@@ -18,10 +18,10 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./">
             <img src="./img/lightlogo.png" height="30" class="d-inline-block align-top" alt="">
         </a>
-        <a class="d-block d-md-none" href="#">
+        <a class="d-block d-md-none" href="./profile.php">
             <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -37,31 +37,31 @@
                                 <span class="pl-1"> Grade Calculator</span>
                             </div>
                         </a>
-                        <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">today</span>
                                 <span class="pl-1"> Week Planner</span>
                             </div>
                         </a>
-                        <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">assignment_turned_in</span>
                                 <span class="pl-1"> To-Do List</span>
                             </div>
                         </a>
-                        <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">contact_phone</span>
                                 <span class="pl-1"> Contact List</span>
                             </div>
                         </a>
-                        <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">description</span>
                                 <span class="pl-1"> Notes</span>
                             </div>
                         </a>
-                        <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">style</span>
                                 <span class="pl-1"> Flashcards</span>
@@ -79,7 +79,7 @@
                                 <span class="pl-1"> Resourses</span>
                             </div>
                         </a>
-                        <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">account_circle</span>
                                 <span class="pl-1"> Profile</span>
@@ -95,7 +95,7 @@
                 </li>
                 <!-- Smaller devices menu END -->
             </ul>
-            <a class="d-none d-md-block" href="./profile.html">
+            <a class="d-none d-md-block" href="./profile.php">
                 <img src="./img/replace.jpg" class=" rounded-circle img-thumbnail ml-auto" alt="..." width="50" height="50" alt="" loading="lazy">
             </a>
         </div>
@@ -105,7 +105,7 @@
         <div class="row flex-grow-1">
             <div id="sidebar-container" class="sidebar-expanded d-none d-md-block border p-0 sidebar">
                 <div class="outer">
-                    <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
+                    <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4 active">
                         <div class="d-flex w-100 justify-content-start align-items-center">
                             <span class="material-icons pl-1 pr-1">contact_phone</span>
                             <h4 class="pl-1 menu-collapsed pr-3"> Contact List</h4>
@@ -127,31 +127,31 @@
                                             <span class="pl-1 menu-collapsed"> Grade Calculator</span>
                                         </div>
                                     </a>
-                                    <a href="./weekplanner.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./weekplanner.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">today</span>
                                             <span class="pl-1 menu-collapsed"> Week Planner</span>
                                         </div>
                                     </a>
-                                    <a href="./todoList.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./todoList.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">assignment_turned_in</span>
                                             <span class="pl-1 menu-collapsed"> To-Do List</span>
                                         </div>
                                     </a>
-                                    <a href="./contacts.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./contacts.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">contact_phone</span>
                                             <span class="pl-1 menu-collapsed"> Contact List</span>
                                         </div>
                                     </a>
-                                    <a href="./notes.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./notes.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">description</span>
                                             <span class="pl-1 menu-collapsed"> Notes</span>
                                         </div>
                                     </a>
-                                    <a href="./flashcards.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./flashcards.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">style</span>
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
@@ -169,7 +169,7 @@
                                             <span class="pl-1 menu-collapsed"> Resourses</span>
                                         </div>
                                     </a>
-                                    <a href="./profile.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./profile.php" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">account_circle</span>
                                             <span class="pl-1 menu-collapsed"> Profile</span>
@@ -192,58 +192,180 @@
             <div class="col-md col-12 border p-0 mh-100" style="background-color: #d9e2e5;">
                 <div class="container-fluid justify-content-center">
                     <div class="container pt-2 col">
-                        <div class="container-fluid">
-                            <div class="row justify-content-md-center">
-                                <div class="col-sm-7">
+                        <div class="container">
+                            <div class="row justify-content-md-center mt-3">
+                                <div class="col-6">
                                     <h1 style="color: #262d13;"><em style="color: #556e07;">Contact</em> List</h1>
                                 </div>
+                                <div style="text-align: right;" class="col-6">
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="material-icons">add</i>
+                                    </button>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="container">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th><i class="material-icons">add</i></th>
+                                        <th></th>
+                                        <th>
+
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam profile"> Dylan</td>
+                                        <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Dylan profile"> Dylan</td>
                                         <td>email1@ryerson.ca</td>
                                         <td>647-123-4567</td>
-                                        <td><i class="material-icons">delete</i></td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delete1">
+                                                <i class="material-icons">create</i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/janice.jpg" alt="Janice profile"> Janice</td>
                                         <td>j17wong@ryerson.ca</td>
                                         <td>647-234-5678</td>
-                                        <td><i class="material-icons">delete</i></td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delete2">
+                                                <i class="material-icons">create</i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark">
+                                                <i class="material-icons">delete</i></td>
+                                        </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Jonathan profile"> Jonathan</td>
                                         <td>email2@ryerson.ca</td>
                                         <td>647-345-6789</td>
-                                        <td><i class="material-icons">delete</i></td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delete3">
+                                                <i class="material-icons">create</i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark">
+                                                <i class="material-icons">delete</i></td>
+                                        </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Maryam profile"> Maryam</td>
                                         <td>email3@ryerson.ca</td>
                                         <td>647-456-7890</td>
-                                        <td><i class="material-icons">delete</i></td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delete4">
+                                                <i class="material-icons">create</i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark">
+                                                <i class="material-icons">delete</i></td>
+                                        </button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+
+                        <!-- MODAL ADD CONTACT -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">New contact</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="name">Name:</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Phone:</label>
+                                                <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="image">Upload an image:</label>
+                                                <input type="file" class="form-control-file" id="image">
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-dark">Add contact</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--MODAL EDIT CONTACT-->
+                        <!-- Modal -->
+                        <div class="modal fade" id="delete1" tabindex="-1" role="dialog" aria-labelledby="delete1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="delete1">Edit contact</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="name">Name:</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Dylan" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email1@ryerson.ca" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Phone:</label>
+                                                <input type="text" class="form-control" id="phone" placeholder="647-123-4567">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="image">Upload an image:</label>
+                                                <input type="file" class="form-control-file" id="image">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-dark">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="./scripts/index.js"></script>
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="./scripts/index.js"></script>
 </body>
 
 </html>

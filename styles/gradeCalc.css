@@ -6,4 +6,9 @@ th {
     background-color: #556e07;
     color: white;
     text-align: center;
+    vertical-align: middle !important;
+}
+
+td {
+    vertical-align: middle !important;
 }
