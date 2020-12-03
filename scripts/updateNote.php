@@ -1,12 +1,13 @@
 <?php
+    echo "updateNote";
+?>
+<?php
 include "dbConnect.php";
 
 $text = $_POST["text"];
-$text = mysqli_real_escape_string($mySQL,$text);
-$text = str_replace("\\'", "''", "$text");
+$text = escape($mySQL,$text);
 
 $name = $_POST["name"];
-
 
 $username = "jkyle109";
 
@@ -26,16 +27,13 @@ if ($row = mysqli_fetch_array($res)) {
     // $notebooks = $userdata["notes"];
     for ($x = 0; $x < count($notebooks); $x++) {
         if ($notebooks[$x]["name"] == $name) {
-            $name = mysqli_real_escape_string($mySQL,$name);
-            $name = str_replace("\\'", "''", "$name");
+            $name = escape($mySQL,$name);
             $notebooks[$x]["name"] = $name;
             $notebooks[$x]["text"] = $text;
         }
         else {
-            $newname = mysqli_real_escape_string($mySQL,$notebooks[$x]["name"]);
-            $notebooks[$x]["name"] = str_replace("\\'", "''", "$newname");
-            $newtext = mysqli_real_escape_string($mySQL,$notebooks[$x]["text"]);
-            $notebooks[$x]["text"] = str_replace("\\'", "''", "$newtext");
+            $notebooks[$x]["name"] = escape($mySQL,$notebooks[$x]["name"]);
+            $notebooks[$x]["text"] = escape($mySQL,$notebooks[$x]["text"]);
         }
     }
     // $userdata["notes"] = $notebooks;
@@ -76,4 +74,9 @@ contacts:
 {"name":"contactName3","email":"contactEmail3","phone":"contactNumber3","pfp":null}]
 
 notes:
-[{"name":"notebookName1","text":"notebookText1"},{"name":"notebookName2","text":"notebookText2"},{"name":"notebookName3","text":"notebookText3"}] -->
+[{"name":"notebookName1","text":"notebookText1"},{"name":"notebookName2","text":"notebookText2"},{"name":"notebookName3","text":"notebookText3"}]
+
+planner:
+["Sunday Plans", "Monday Plans", "Tuesday Plans", "Wednesday Plans", "Thursday Plans", "Friday Plans", "Saturday Plans"]
+
+-->

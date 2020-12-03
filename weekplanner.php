@@ -1,3 +1,20 @@
+<?php
+include "./scripts/dbConnect.php";
+
+$username = "jkyle109";
+$query = "SELECT `planner` FROM `userssdo` WHERE `username`='$username' LIMIT 1";
+$res = mysqli_query($mySQL, $query);
+if (!$res) {
+    printf("Error: %s\n", mysqli_error($mySQL));
+    exit();
+}
+if ($row = mysqli_fetch_array($res)) {
+    $planner = json_decode($row[0], true);
+    // var_dump($planner);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,38 +206,45 @@
             <!-- Week Planner -->
             <div class="col-md col-12 border p-0 mh-100" id="profile-container">
                 <div class="container-fluid">
-                    <div class="row weekday-row">
-                        <div class="col-lg-3 weekday">
-                            <h1>Sunday</h1>
-                            <textarea name="Sunday" id="Sunday" placeholder="Type here..."></textarea>
+                    <?php
+                    echo <<<CARD
+                    <form action="./scripts/updatePlanner.php" method="post">
+                        <div class="row weekday-row">
+                            <div class="col-lg-3 weekday">
+                                <h1>Sunday</h1>
+                                <textarea name="0" id="Sunday" placeholder="Type here...">$planner[0]</textarea>
+                            </div>
+                            <div class="col-lg-3 weekday">
+                                <h1>Monday</h1>
+                                <textarea name="1" id="Monday" placeholder="Type here...">$planner[1]</textarea>
+                            </div>
+                            <div class="col-lg-3 weekday">
+                                <h1>Tuesday</h1>
+                                <textarea name="2" id="Tuesday" placeholder="Type here...">$planner[2]</textarea>
+                            </div>
+                            <div class="col-lg-3 weekday">
+                                <h1>Wednesday</h1>
+                                <textarea name="3" id="Wednesday" placeholder="Type here...">$planner[3]</textarea>
+                            </div>
                         </div>
-                        <div class="col-lg-3 weekday">
-                            <h1>Monday</h1>
-                            <textarea name="Monday" id="Monday" placeholder="Type here..."></textarea>
+                        <div class="row weekday-row">
+                            <div class="col-lg-4 weekday">
+                                <h1>Thursday</h1>
+                                <textarea name="4" id="Thursday" placeholder="Type here...">$planner[4]</textarea>
+                            </div>
+                            <div class="col-lg-4 weekday">
+                                <h1>Friday</h1>
+                                <textarea name="5" id="Friday" placeholder="Type here...">$planner[5]</textarea>
+                            </div>
+                            <div class="col-lg-4 weekday">
+                                <h1>Saturday</h1>
+                                <textarea name="6" id="Saturday" placeholder="Type here...">$planner[6]</textarea>
+                            </div>
                         </div>
-                        <div class="col-lg-3 weekday">
-                            <h1>Tuesday</h1>
-                            <textarea name="Tuesday" id="Tuesday" placeholder="Type here..."></textarea>
-                        </div>
-                        <div class="col-lg-3 weekday">
-                            <h1>Wednesday</h1>
-                            <textarea name="Wednesday" id="Wednesday" placeholder="Type here..."></textarea>
-                        </div>
-                    </div>
-                    <div class="row weekday-row">
-                        <div class="col-lg-4 weekday">
-                            <h1>Thursday</h1>
-                            <textarea name="Thursday" id="Thursday" placeholder="Type here..."></textarea>
-                        </div>
-                        <div class="col-lg-4 weekday">
-                            <h1>Friday</h1>
-                            <textarea name="Friday" id="Friday" placeholder="Type here..."></textarea>
-                        </div>
-                        <div class="col-lg-4 weekday">
-                            <h1>Saturday</h1>
-                            <textarea name="Saturday" id="Saturday" placeholder="Type here..."></textarea>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-dark">Save</button>
+                    </form>
+                    CARD;
+                    ?>
                 </div>
             </div>
 

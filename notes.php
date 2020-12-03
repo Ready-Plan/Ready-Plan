@@ -301,7 +301,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form action="./scripts/updateNotebooks.php" method="post">
+                                    <form action="./scripts/addNotebook.php" method="post">
                                         <div class="modal-body">
 
                                             <div class="form-group">

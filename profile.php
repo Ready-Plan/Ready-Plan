@@ -1,3 +1,25 @@
+<?php
+include "./scripts/dbConnect.php";
+
+$username = "jkyle109";
+$query = "SELECT `username`, `fname`, `lname`, `email` FROM `userssdo` WHERE `username`='$username' LIMIT 1";
+$res = mysqli_query($mySQL, $query);
+if (!$res) {
+    printf("Error: %s\n", mysqli_error($mySQL));
+    exit();
+}
+if ($row = mysqli_fetch_assoc($res)) {
+    // var_dump($row);
+    $fname = $row["fname"];
+    $lname = $row["lname"];
+    $username = $row["username"];
+    $email = $row["email"];
+    echo $fname . $lname . $email . $username;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,59 +211,64 @@
             <!-- Profile -->
             <div class="col-md col-12 border p-0 mh-100" id="profile-container">
                 <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-sm-2 pt-2">
-                            <img src="./img/replace.jpg" alt="profile picture" class="img-thumbnail" />
-                        </div>
-                        <div class="col-sm-9">
-                            <h1 style="color: #262d13;"><em style="color: #556e07;">John Doe's</em> Profile</h1>
-                        </div>
-                    </div>
-                    <form action="" method="POST">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="username" id="username" value="JohnDoe123">
+                    <?php
+                    echo <<<CARD
+                            <div class="row align-items-center">
+                                <div class="col-sm-2 pt-2">
+                                    <img src="./img/replace.jpg" alt="profile picture" class="img-thumbnail" />
+                                </div>
+                                <div class="col-sm-9">
+                                    <h1 style="color: #262d13;"><em style="color: #556e07;">$fname $lname's</em> Profile</h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">First Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="fname" id="fname" value="John">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Last Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="lname" id="lname" value="Doe">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">E-Mail</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Current Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="curpass" id="curpass">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">New Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="newpass" id="newpass">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Confirm Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="conpass" id="conpass">
-                            </div>
-                        </div>
-                        <input class="btn btn-dark col-auto" type="submit" value="Save Changes">
-                    </form>
+                            <form action="" method="POST">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="username" id="username" value="$username">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">First Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="fname" id="fname" value="$fname">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Last Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="lname" id="lname" value="$lname">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">E-Mail</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="email" id="email" value="$email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Current Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="curpass" id="curpass">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">New Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="newpass" id="newpass">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Confirm Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="conpass" id="conpass">
+                                    </div>
+                                </div>
+                                <input class="btn btn-dark col-auto" type="submit" value="Save Changes">
+                            </form>
+                        CARD;
+                    ?>
+
                 </div>
             </div>
 
