@@ -14,7 +14,7 @@ if ($row = mysqli_fetch_assoc($res)) {
     $lname = $row["lname"];
     $username = $row["username"];
     $email = $row["email"];
-    echo $fname . $lname . $email . $username;
+    // echo $fname . $lname . $email . $username;
 }
 ?>
 
@@ -89,7 +89,7 @@ if ($row = mysqli_fetch_assoc($res)) {
                                 <span class="pl-1"> Flashcards</span>
                             </div>
                         </a>
-                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">gesture</span>
                                 <span class="pl-1"> Sketch Book</span>
@@ -107,7 +107,7 @@ if ($row = mysqli_fetch_assoc($res)) {
                                 <span class="pl-1"> Profile</span>
                             </div>
                         </a>
-                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">help</span>
                                 <span class="pl-1"> About Us</span>
@@ -178,7 +178,7 @@ if ($row = mysqli_fetch_assoc($res)) {
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
                                         </div>
                                     </a>
-                                    <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">gesture</span>
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
@@ -196,7 +196,7 @@ if ($row = mysqli_fetch_assoc($res)) {
                                             <span class="pl-1 menu-collapsed"> Profile</span>
                                         </div>
                                     </a>
-                                    <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">help</span>
                                             <span class="pl-1 menu-collapsed"> About Us</span>

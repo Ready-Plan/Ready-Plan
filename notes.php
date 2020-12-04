@@ -1,11 +1,6 @@
 <?php
 include "./scripts/dbConnect.php";
 
-// if (isset($_POST["notebookName3"])) {
-//     echo $_POST["notebookName3"];
-// }
-
-// echo "Connected successfully <br>";
 $username = "jkyle109";
 $query = "SELECT `notes` FROM `userssdo` WHERE `username`='$username' LIMIT 1";
 $res = mysqli_query($mySQL, $query);
@@ -45,8 +40,6 @@ if ($row = mysqli_fetch_array($res)) {
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,15 +53,6 @@ if ($row = mysqli_fetch_array($res)) {
     <title>readyPlan - Notes</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/flashcards.css">
-    <script type="text/javascript">
-        // function save(name, index) {
-        //     let eleId = "notebook-" + index;
-        //     let newtext = document.getElementById(eleId).value;
-        //     console.log(newtext);
-        // }
-        // let somethin = '';
-        // console.log(somethin);
-    </script>
 </head>
 
 <body class="outer">
@@ -125,7 +109,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Flashcards</span>
                             </div>
                         </a>
-                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">gesture</span>
                                 <span class="pl-1"> Sketch Book</span>
@@ -143,7 +127,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Profile</span>
                             </div>
                         </a>
-                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">help</span>
                                 <span class="pl-1"> About Us</span>
@@ -214,7 +198,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
                                         </div>
                                     </a>
-                                    <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">gesture</span>
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
@@ -232,7 +216,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Profile</span>
                                         </div>
                                     </a>
-                                    <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">help</span>
                                             <span class="pl-1 menu-collapsed"> About Us</span>
@@ -264,17 +248,14 @@ if ($row = mysqli_fetch_array($res)) {
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-0" role="tab">$notebookName</a>
                                         </li>
-                                    CARD;
+CARD;
                                     for ($x = 1; $x < count($notebooks); $x++) {
                                         $notebookName = $notebooks[$x]["name"];
-                                        // $notebookText = $userdata["notes"][$x]["text"];
-                                        // Append 
-                                        // echo $notebookName . $notebookText;
                                         echo  <<<CARD
                                             <li class="nav-item" role="presentation">
                                                 <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-$x" role="tab">$notebookName</a>
                                             </li>
-                                        CARD;
+CARD;
                                     }
                                     ?>
                                 </ul>
@@ -355,7 +336,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 </form>
                         </div>
                     </div>
-                CARD;
+CARD;
                 for ($x = 1; $x < count($notebooks); $x++) {
                     $notebookName = $notebooks[$x]["name"];
                     $notebookText = $notebooks[$x]["text"];
@@ -386,7 +367,7 @@ if ($row = mysqli_fetch_array($res)) {
                                     </form>
                             </div>
                         </div>
-                    CARD;
+CARD;
                 }
                 ?>
             </div>
@@ -394,10 +375,7 @@ if ($row = mysqli_fetch_array($res)) {
 
 
     </div>
-    <!-- <div>
-                footer
-            </div> -->
-
+    
     </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
