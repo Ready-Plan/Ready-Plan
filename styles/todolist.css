@@ -123,6 +123,7 @@ input {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+    border: none !important;
 }
 
 .addBtn:hover {
