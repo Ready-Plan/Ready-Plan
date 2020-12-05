@@ -10,7 +10,7 @@ if (!$res) {
 }
 if ($row = mysqli_fetch_array($res)) {
     $contacts = json_decode($row[0], true);
-    var_dump($contacts);
+    // var_dump($contacts);
 }
 ?>
 
