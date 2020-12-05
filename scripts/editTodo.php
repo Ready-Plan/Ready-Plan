@@ -19,6 +19,8 @@ if (!$res) {
     exit();
 }
 if ($row = mysqli_fetch_array($res)) {
+    // $yy = '[{"task":"task1","state":"checked"},{"task":"task2","state":""},{"task":"task3","state":"checked"}]';
+    // $tasks = json_decode($yy, true);
     $tasks = json_decode($row[0], true);
 
     if ($type == "add") {
@@ -38,8 +40,8 @@ if ($row = mysqli_fetch_array($res)) {
             else {
                 $tasks[$x]["task"] = escape($mySQL,$tasks[$x]["task"]);
             }
-            
         }
+        $tasks = array_values($tasks);
     }
     elseif ($type == "state") {
         for ($x = 0; $x < count($tasks); $x++) {

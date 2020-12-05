@@ -10,7 +10,7 @@ if (!$res) {
 }
 if ($row = mysqli_fetch_array($res)) {
     $todo = json_decode($row[0], true);
-    // var_dump($todo);
+    var_dump($todo);
 }
 ?>
 
