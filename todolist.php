@@ -1,3 +1,21 @@
+<?php
+include "./scripts/dbConnect.php";
+
+$username = "jkyle109";
+$query = "SELECT `to-do` FROM `userssdo` WHERE `username`='$username' LIMIT 1";
+$res = mysqli_query($mySQL, $query);
+if (!$res) {
+    printf("Error: %s\n", mysqli_error($mySQL));
+    exit();
+}
+if ($row = mysqli_fetch_array($res)) {
+    $todo = json_decode($row[0], true);
+    var_dump($todo);
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +85,7 @@
                                 <span class="pl-1"> Flashcards</span>
                             </div>
                         </a>
-                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">gesture</span>
                                 <span class="pl-1"> Sketch Book</span>
@@ -85,7 +103,7 @@
                                 <span class="pl-1"> Profile</span>
                             </div>
                         </a>
-                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">help</span>
                                 <span class="pl-1"> About Us</span>
@@ -158,7 +176,7 @@
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
                                         </div>
                                     </a>
-                                    <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">gesture</span>
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
@@ -176,7 +194,7 @@
                                             <span class="pl-1 menu-collapsed"> Profile</span>
                                         </div>
                                     </a>
-                                    <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">help</span>
                                             <span class="pl-1 menu-collapsed"> About Us</span>
@@ -202,19 +220,38 @@
 
                 <div class="container">
                     <div id="myDIV" class="header">
-                        <h4>List 1</h4>
+                        <h4>Tasks</h4>
                     </div>
-                    <ul id="myUL">
-                        <li>Hit the gym</li>
-                        <li class="checked">Pay bills</li>
-                        <li>Meet George</li>
-                        <li>Buy eggs</li>
-                        <li>Read a book</li>
-                        <li>Organize office</li>
-                    </ul>
-
-                    <input type="text" id="myInput" placeholder="Add item">
-                    <span onclick="newElement()" class="addBtn">Add</span>
+                        <ul id="myUL">
+                            <?php
+                            for ($x = 0; $x < count($todo); $x++) {
+                                $task = $todo[$x]["task"];
+                                $state = $todo[$x]["state"];
+                                
+                                echo <<<CARD
+                                <li class='$state overflow-auto'>
+                                    $task
+                                    <form id='form-$x' class='m-0' action="./scripts/editTodo.php" method="post">
+                                        <input type="hidden" name="task" value="$task"></input>
+                                        <input type="hidden" name="state" value="$state"></input>
+                                        <input type="hidden" name="type" value="state"></input>
+                                    </form>
+                                    <form class='m-0' action="./scripts/editTodo.php" method="post">
+                                        <input type="hidden" name="task" value="$task"></input>
+                                        <input type="hidden" name="state" value="$state"></input>
+                                        <button name='type' type='submit' value='delete' class='close h-100 mr-3'>×</button>
+                                    </form>
+                                </li>
+CARD;
+                            }
+                            ?>
+                        </ul>
+                    <form class="m-0" action="./scripts/editTodo.php" method="post">
+                        <input name="task" type="text" id="myInput" placeholder="Add item">
+                        <input type="hidden" name="state" value=""></input>
+                        <button name="type" value="add" type="submit" class="addBtn">Add</button>
+                    </form>
+                    
 
                 </div>
             </div>

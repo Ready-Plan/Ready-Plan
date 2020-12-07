@@ -86,7 +86,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Flashcards</span>
                             </div>
                         </a>
-                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">gesture</span>
                                 <span class="pl-1"> Sketch Book</span>
@@ -104,7 +104,7 @@ if ($row = mysqli_fetch_array($res)) {
                                 <span class="pl-1"> Profile</span>
                             </div>
                         </a>
-                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">help</span>
                                 <span class="pl-1"> About Us</span>
@@ -175,7 +175,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
                                         </div>
                                     </a>
-                                    <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">gesture</span>
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
@@ -193,7 +193,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <span class="pl-1 menu-collapsed"> Profile</span>
                                         </div>
                                     </a>
-                                    <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">help</span>
                                             <span class="pl-1 menu-collapsed"> About Us</span>
@@ -223,7 +223,7 @@ if ($row = mysqli_fetch_array($res)) {
                                                 <li class="nav-item" role="presentation">
                                                     <a class="nav-link active ml-2 mr-2" data-toggle="pill" href="#pills-0" role="tab">$collectionName</a>
                                                 </li>
-                                            CARD;
+CARD;
                                     for ($x = 1; $x < count($flashcards); $x++) {
                                         $collectionName = $flashcards[$x]["name"];
 
@@ -231,7 +231,7 @@ if ($row = mysqli_fetch_array($res)) {
                                                     <li class="nav-item" role="presentation">
                                                         <a class="nav-link ml-2 mr-2" data-toggle="pill" href="#pills-$x" role="tab">$collectionName</a>
                                                     </li>
-                                                CARD;
+CARD;
                                     }
                                     ?>
 
@@ -306,7 +306,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             <!-- Collapse -->
                                             <div class="idk overflow-auto">
                                                 <div class="accordion" id="accordion-$x">
-                        CARD;
+CARD;
                 for ($y = 0; $y < count($collectionCards); $y++) {
                     $q = $collectionCards[$y]["question"];
                     $a = $collectionCards[$y]["answer"];
@@ -326,7 +326,7 @@ if ($row = mysqli_fetch_array($res)) {
                                         </div>
                                     </div>
                                 </div>
-                            CARD;
+CARD;
                 }
                 echo <<<CARD
                                     </div>
@@ -391,7 +391,7 @@ if ($row = mysqli_fetch_array($res)) {
 
                                                 <div id="carouselControls-$x" class="carousel slide" data-interval="false">
                                                     <div class="carousel-inner">
-                        CARD;
+CARD;
                 $q = $collectionCards[0]["question"];
                 $a = $collectionCards[0]["answer"];
                 echo <<<CARD
@@ -403,7 +403,7 @@ if ($row = mysqli_fetch_array($res)) {
                                     </div>
                                 </section>
                             </div>
-                        CARD;
+CARD;
                 for ($y = 1; $y < count($collectionCards); $y++) {
                     $q = $collectionCards[$y]["question"];
                     $a = $collectionCards[$y]["answer"];
@@ -416,7 +416,7 @@ if ($row = mysqli_fetch_array($res)) {
                                         </div>
                                     </section>
                                 </div>
-                            CARD;
+CARD;
                 }
                 echo <<<CARD
                                                                     <a class="carousel-control-prev" href="#carouselControls-$x" role="button" data-slide="prev">
@@ -440,7 +440,7 @@ if ($row = mysqli_fetch_array($res)) {
                                     </div>
                                 </div>
                             </div>
-                        CARD;
+CARD;
                 for ($x = 1; $x < count($flashcards); $x++) {
                     $collectionName = $flashcards[$x]["name"];
                     $collectionCards = $flashcards[$x]["cards"];
@@ -457,7 +457,7 @@ if ($row = mysqli_fetch_array($res)) {
                                                 <!-- Collapse -->
                                                 <div class="idk overflow-auto">
                                                     <div class="accordion" id="accordion-$x">
-                            CARD;
+CARD;
                     for ($y = 0; $y < count($collectionCards); $y++) {
                         $q = $collectionCards[$y]["question"];
                         $a = $collectionCards[$y]["answer"];
@@ -477,7 +477,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             </div>
                                         </div>
                                     </div>
-                                CARD;
+CARD;
                     }
                     echo <<<CARD
                                         </div>
@@ -542,7 +542,7 @@ if ($row = mysqli_fetch_array($res)) {
 
                                                     <div id="carouselControls-$x" class="carousel slide" data-interval="false">
                                                         <div class="carousel-inner">
-                            CARD;
+CARD;
                     $q = $collectionCards[0]["question"];
                     $a = $collectionCards[0]["answer"];
                     echo <<<CARD
@@ -554,7 +554,7 @@ if ($row = mysqli_fetch_array($res)) {
                                         </div>
                                     </section>
                                 </div>
-                            CARD;
+CARD;
                     for ($y = 1; $y < count($collectionCards); $y++) {
                         $q = $collectionCards[$y]["question"];
                         $a = $collectionCards[$y]["answer"];
@@ -568,7 +568,7 @@ if ($row = mysqli_fetch_array($res)) {
                                             </div>
                                         </section>
                                     </div>
-                                CARD;
+CARD;
                     }
                     echo <<<CARD
                                                                         <a class="carousel-control-prev" href="#carouselControls-$x" role="button" data-slide="prev">
@@ -592,7 +592,7 @@ if ($row = mysqli_fetch_array($res)) {
                                         </div>
                                     </div>
                                 </div>
-                            CARD;
+CARD;
                 }
                 ?>
                 <!-- <div class="tab-pane fade show active outer" id="pills-CPS109" role="tabpanel">

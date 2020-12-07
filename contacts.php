@@ -1,3 +1,21 @@
+<?php
+include "./scripts/dbConnect.php";
+
+$username = "jkyle109";
+$query = "SELECT `contacts` FROM `userssdo` WHERE `username`='$username' LIMIT 1";
+$res = mysqli_query($mySQL, $query);
+if (!$res) {
+    printf("Error: %s\n", mysqli_error($mySQL));
+    exit();
+}
+if ($row = mysqli_fetch_array($res)) {
+    $contacts = json_decode($row[0], true);
+    // var_dump($contacts);
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +85,7 @@
                                 <span class="pl-1"> Flashcards</span>
                             </div>
                         </a>
-                        <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">gesture</span>
                                 <span class="pl-1"> Sketch Book</span>
@@ -85,7 +103,7 @@
                                 <span class="pl-1"> Profile</span>
                             </div>
                         </a>
-                        <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                        <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="material-icons">help</span>
                                 <span class="pl-1"> About Us</span>
@@ -157,7 +175,7 @@
                                             <span class="pl-1 menu-collapsed"> Flashcards</span>
                                         </div>
                                     </a>
-                                    <a href="./canvas.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./canvas2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">gesture</span>
                                             <span class="pl-1 menu-collapsed"> Sketch Book</span>
@@ -175,7 +193,7 @@
                                             <span class="pl-1 menu-collapsed"> Profile</span>
                                         </div>
                                     </a>
-                                    <a href="./aboutUs.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
+                                    <a href="./aboutUs2.html" class="list-group-item list-group-item-action p-3 pl-4 pr-4">
                                         <div class="d-flex w-100 justify-content-start align-items-center">
                                             <span class="material-icons">help</span>
                                             <span class="pl-1 menu-collapsed"> About Us</span>
@@ -219,7 +237,31 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <?php
+                                    for ($x = 0; $x < count($contacts); $x++) {
+                                        $name = $contacts[$x]["name"];
+                                        $email = $contacts[$x]["email"];
+                                        $phone = $contacts[$x]["phone"];
+                                        echo <<<CARD
+                                            <tr>
+                                                <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="$name's profile"> $name</td>
+                                                <td>$email</td>
+                                                <td>$phone</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delete1">
+                                                        <i class="material-icons">create</i>
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-dark">
+                                                        <i class="material-icons">delete</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+CARD;
+                                    }
+                                    ?>
+                                    <!-- <tr>
                                         <td class="name"><img class="rounded-circle img-fluid pfp" src="./img/replace.jpg" alt="Dylan profile"> Dylan</td>
                                         <td>email1@ryerson.ca</td>
                                         <td>647-123-4567</td>
@@ -278,7 +320,7 @@
                                                 <i class="material-icons">delete</i></td>
                                         </button>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -293,31 +335,29 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-
-                                        <form>
+                                    <form action="./scripts/addContact.php" method="post" enctype="multipart/form-data">
+                                        <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="name">Name:</label>
-                                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required">
+                                                <input name="name" type="text" class="form-control" id="fname" placeholder="Enter first name" required="required">
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">Email:</label>
-                                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required="required">
+                                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required="required">
                                             </div>
                                             <div class="form-group">
                                                 <label for="phone">Phone:</label>
-                                                <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                                <input name="phone" type="text" class="form-control" id="phone" placeholder="Enter phone number">
                                             </div>
                                             <div class="form-group">
                                                 <label for="image">Upload an image:</label>
-                                                <input type="file" class="form-control-file" id="image">
+                                                <input name="pfp" type="file" class="form-control-file" id="image">
                                             </div>
-                                        </form>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-dark">Add contact</button>
-                                    </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button name="submit" type="submit" class="btn btn-dark">Add contact</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
