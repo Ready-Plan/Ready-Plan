@@ -197,35 +197,35 @@
                             <h1 style="color: #262d13;"><em style="color: #556e07;">John Doe's</em> Profile</h1>
                         </div>
                     </div>
-                    <form action="" method="POST">
+                    <form action="" method="POST" onsubmit="return formValidator()">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Username</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="username" id="username" value="JohnDoe123">
+                                <input type="text" class="form-control" name="username" id="username" value="JohnDoe123" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">First Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="fname" id="fname" value="John">
+                                <input type="text" class="form-control" name="fname" id="fname" value="John" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Last Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="lname" id="lname" value="Doe">
+                                <input type="text" class="form-control" name="lname" id="lname" value="Doe" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">E-Mail</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com">
+                                <input type="text" class="form-control" name="email" id="email" value="johndoe123@email.com" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Current Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="curpass" id="curpass">
+                                <input type="password" class="form-control" name="curpass" id="curpass" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -256,6 +256,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/profileValidator.js"></script>
 </body>
 
 </html>
